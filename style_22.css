@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    cursor: none;
+}
+
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url(bg.jpg),url(mask.jpg); */
+    background: url('https://images.unsplash.com/flagged/photo-1566524468620-a316e0fc8731?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),url(./mask.jpg); 
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 0.6s;
+
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 40px 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+header .logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, cursive;
+    position: relative;
+    color:#015b75;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.content{
+    padding: 50px;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 0.3s;
+}
+
+.content h2{
+    font-size: 9em;
+    line-height: 1em;
+    color: #015b75;
+    font-family: 'Kaushan Script', cursive;
+}
+  
+.cursor{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 0px;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    z-index: 1;
+    animation: breathe 3s ease 1s infinite;
+    position:absolute;
+    background: rgba(1, 91, 117, 0.6);
+    border-radius: 50%;
+}
+
+ .cursor-animate {
+    animation: breathe 3s ease 1s infinite;
+    position:absolute;
+    background: rgba(1, 91, 117, 0.7);
+    border-radius: 50%;
+  }
+
+  .link-grow{
+    width: 32px;
+    height: 32px;
+    border: 0px;
+    background:rgba(255, 20, 147, 0.75);
+    /* background: url('../img/logo.png'); */
+    animation: none;
+    z-index: 2;
+}
+
+.lan_select{
+    width: 32px;
+    height: 32px;
+    border: 0px;
+    background: url('../../assets/click.ico');
+    animation: none;
+}
+  
+  @keyframes breathe {
+    0% {
+      transform: scale(1,1);
+    }
+   
+    50% {
+      transform: scale(1.5,1.5);
+    }
+  
+    100% {
+      transform: scale(1,1);
+      background: rgba(256,256,256,0);
+    }
+  }
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+.search{
+    position: absolute;
+    font-size: 38px;
+    color: #015b75;
+    position: absolute;
+    margin:0em;
+    color:#015b75;
+    cursor: pointer;
+    right: 15%;
+    z-index: 1;
+    opacity: 1;
+    top:38px;
+}
+
+.menu-btn{
+    position: absolute;
+    margin:1em;
+    font-size: 40px;
+    color:#015b75;
+    cursor: pointer;
+    right: 5%;
+}
+
+.menu{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background:rgba(255,255,255,0.88);
+    opacity: 0;
+}
+
+.close-menu{
+    position: absolute;
+    margin:1em;
+    font-size: 40px;
+    color: #015b75;
+    z-index: -1;
+    visibility: hidden;
+    right:5%
+}
+
+.nav{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 20%;
+    margin-top: 8%;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.main-menu-item{
+    padding-top:30px;
+}
+
+.main-menu-item a{
+    letter-spacing:4px;
+    text-decoration: none;
+    font-family: Georgia,'Nimbus Roman No9 L','Hiragino Sans GB', 'Noto Serif SC','Microsoft Yahei', sans-serif;
+    font-size: 30px;
+    color: #015b75;
+}
+
+.submenu-item a{
+    color: grey;
+}
+
+.submenu li{
+    margin: 5px 0 5px 30px;
+}
+
+a ion-icon{
+    position: relative;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.submenu{
+    display: none;
+}
+
+.contact{
+    color: #015b75;
+    position: absolute;
+    bottom: 60px;
+    right: 24%;
+}
+
+.contact p{
+    font-weight: lighter;
+    color: grey;
+}
+
+.contact p:hover{
+    font-weight: lighter;
+    color: grey;
+}
+
+.language{
+    position: absolute;
+    bottom: 60px;
+    left: 22%;
+}
+
+.language ul{
+    list-style: none;
+}
+
+.language ul li{
+    display: inline-block;
+    padding-right: 16px;
+}
+
+.imgbox{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 30px;
+}
+
+.imgbox img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.9;
+    transition: all 0.6s;
+}
+
+.imgbox img:hover {
+    transform: scale(1.25);
+}
+
+
+.naimg{
+    width: 30%;
+    margin-left: auto; 
+    margin-right:auto; 
+    padding:0;
+    display:grid;
+}
+.nav ul li a:hover{
+    font-size: 33px;
+    transition: all 0.8s ease;
+}
+
+footer{
+    color: #015b75;
+    text-align: center;
+    text-decoration: none;
+    padding:0px 0 20px;
+}
+
+footer .cpryt .a:link{
+    text-decoration: none;
+}
+
+@media (max-width: 991px){
+    section{
+        background-size: 200%;
+    }
+    .content h2{
+        font-size: 20vw;
+        color: #015b75;
+        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav{
+        margin-top: 20%;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    .search{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .main-menu{
+        top: 20%;
+    }
+
+    .main-menu-item{
+        padding-top:20px;
+    }
+
+    .main-menu-item a{
+        font-size: 20px;
+        font-weight: 350;
+    }
+
+    .nav{
+        left:10%;
+    }
+
+    header .logo{
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .menu-btn{
+        font-size: 30px;
+        right: 3%;
+    }
+    .close-menu{
+        font-size: 30px;
+        right:3%
+    }
+
+    .language{
+        bottom: 40px;
+        margin: 0 auto;
+        left: 30%
+    }
+
+    .imgbox{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+
+    .link-grow{
+        width: 60px;
+        height: 60px;
+    }
+
+    
+}
